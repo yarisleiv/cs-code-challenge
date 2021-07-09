@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8" />
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css" />
+<link rel="stylesheet" href="../styles/styles.css" />
+
+<body>
+  <div id="qunit"></div>
+  <main class="main" id="main"></main>
+  <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+  <script id="template" type="text/x-handlebars-template">
+    <ul class="user-list-none">
+      {{#each data}}
+        <li class="user-list__item">
+          <div class="user-list-container">
+            <div class="user-list-avatar"><img
+                src={{avatar}}
+                alt="avatar"
+              /></div>
+            <div class="user-list-info">
+              <div class="user-list-name" id="name-{{id}}">{{first_name}}
+                {{last_name}}</div>
+              <div class="user-list-email" id="email-{{id}}">{{email}}</div>
+              <div class="user-list-id" id="{{id}}">{{id}}</div>
+              <button
+                class="user-list-button"
+                id="button-{{id}}"
+              >Show more</button>
+            </div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <script src="../js/main.js"></script>
+  <script src="./tests.js"></script>
+</body>

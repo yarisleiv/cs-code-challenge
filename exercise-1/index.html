@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+
+    <title>Test task 1</title>
+  </head>
+
+  <body>
+    <main class="main" id="main"></main>
+
+    <script id="template" type="text/x-handlebars-template">
+      <ul class="user-list">
+        {{#each data}}
+          <li class="user-list__item">
+            <div class="user-list-container">
+              <div class="user-list-avatar"><img
+                  src={{avatar}}
+                  alt="avatar"
+                /></div>
+              <div class="user-list-info">
+                <div class="user-list-name" id="name-{{id}}">{{first_name}}
+                  {{last_name}}</div>
+                <div class="user-list-email" id="email-{{id}}">{{email}}</div>
+                <div class="user-list-id" id="{{id}}">{{id}}</div>
+                <button
+                  class="user-list-button"
+                  id="button-{{id}}"
+                >Show more</button>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </script>
+  </body>
+</html>

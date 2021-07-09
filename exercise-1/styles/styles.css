@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-list-button {
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 30px;
+    background: #e9e7e7;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.user-list-button:hover {
+    background: #a3a2a2;
+    transition: all 0.25s ease-in-out;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    background: #ccc;
+    position: relative;
+    z-index: 0;
+}
+
+#qunit {
+    position: absolute;
+    z-index: 100;
+    height: fit-content;
+}
+
+.user-list {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.user-list-none {
+    display: none;
+}
+
+.user-list__item {
+    list-style: none;
+    display: flex;
+    background-color: whitesmoke;
+    min-width: 400px;
+    min-height: 144px;
+    padding: 10px;
+}
+
+.user-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 15px black;
+}
+
+.user-list-avatar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.user-list-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.user-list-info * {
+    margin-bottom: 5px;
+}
+
+.user-list-name {
+    font-weight: bold;
+}
+
+.user-list-email {
+    display: none;
+    font-size: 12px;
+}
+
+.user-list-id {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.user-list-id, .user-list-email, .user-list-name {
+    user-select: none;
+}
+
+.shown {
+    display: flex;
+}
