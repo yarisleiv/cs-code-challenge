@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Todo list App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" media="screen" charset="utf-8">
+  <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+
+  <main class="main" id="main">
+    <p class="main__task-input-container">
+    <label class="title new-task" for="new-task">Add Item</label>
+    <form class="main__task-list">
+      <input id="new-task" class="main__task-input task input-text" type="text">
+      <button class="button button-add" id="add">Add</button>
+    </form>
+    </p>
+    <h3 class="title">Todo</h3>
+    <ul class="list list-incompleted" id="incompleteTasks">
+    </ul>
+    <h3 class="title">Completed</h3>
+    <ul class="list list-completed" id="completed-tasks">
+    </ul>
+  </main>
+
+</body>
+
+</html>
